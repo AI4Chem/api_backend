@@ -1,0 +1,68 @@
+2024-03-26 14:41:44.507 | DEBUG    | api.config:<module>:296 - SETTINGS: {
+    "host": "0.0.0.0",
+    "port": 10085,
+    "api_prefix": "/v1",
+    "engine": "default",
+    "model_name": "internlm2",
+    "model_path": "/mnt/petrelfs/zhangdi1/chemllm-lnk/LLaMA-Factory-dev/CHEMLLM_1_5_DPO_exported",
+    "adapter_model_path": null,
+    "resize_embeddings": false,
+    "dtype": "half",
+    "device": "cuda",
+    "device_map": "auto",
+    "gpus": null,
+    "num_gpus": 1,
+    "only_embedding": false,
+    "embedding_name": "moka-ai/m3e-base",
+    "embedding_size": -1,
+    "embedding_device": "cuda",
+    "quantize": 16,
+    "load_in_8bit": false,
+    "load_in_4bit": false,
+    "using_ptuning_v2": false,
+    "pre_seq_len": 128,
+    "context_length": 4096,
+    "chat_template": null,
+    "rope_scaling": null,
+    "flash_attn": false,
+    "trust_remote_code": false,
+    "tokenize_mode": "auto",
+    "tensor_parallel_size": 1,
+    "gpu_memory_utilization": 0.9,
+    "max_num_batched_tokens": -1,
+    "max_num_seqs": 256,
+    "quantization_method": null,
+    "enforce_eager": false,
+    "max_context_len_to_capture": 8192,
+    "max_loras": 1,
+    "max_lora_rank": 32,
+    "lora_extra_vocab_size": 256,
+    "lora_dtype": "auto",
+    "max_cpu_loras": -1,
+    "lora_modules": "",
+    "use_streamer_v2": false,
+    "api_keys": null,
+    "activate_inference": true,
+    "interrupt_requests": true,
+    "n_gpu_layers": 0,
+    "main_gpu": 0,
+    "tensor_split": null,
+    "n_batch": 512,
+    "n_threads": 128,
+    "n_threads_batch": 128,
+    "rope_scaling_type": -1,
+    "rope_freq_base": 0.0,
+    "rope_freq_scale": 0.0,
+    "tgi_endpoint": null,
+    "tei_endpoint": null,
+    "max_concurrent_requests": 256,
+    "max_client_batch_size": 32
+}
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]Loading checkpoint shards:  12%|█▎        | 1/8 [00:01<00:10,  1.44s/it]Loading checkpoint shards:  25%|██▌       | 2/8 [00:02<00:08,  1.49s/it]Loading checkpoint shards:  38%|███▊      | 3/8 [00:04<00:07,  1.49s/it]Loading checkpoint shards:  50%|█████     | 4/8 [00:05<00:05,  1.48s/it]Loading checkpoint shards:  62%|██████▎   | 5/8 [00:07<00:04,  1.50s/it]Loading checkpoint shards:  75%|███████▌  | 6/8 [00:08<00:03,  1.51s/it]Loading checkpoint shards:  88%|████████▊ | 7/8 [00:10<00:01,  1.52s/it]Loading checkpoint shards: 100%|██████████| 8/8 [00:11<00:00,  1.46s/it]Loading checkpoint shards: 100%|██████████| 8/8 [00:11<00:00,  1.48s/it]
+2024-03-26 14:42:06.942 | INFO     | api.models:create_generate_model:61 - Using default engine
+INFO:     Started server process [39159]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:10085 (Press CTRL+C to quit)
+slurmstepd: error: *** JOB 3334689 ON SH-IDC1-10-140-24-111 CANCELLED AT 2024-03-26T14:42:32 ***
+INFO:     Shutting down

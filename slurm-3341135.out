@@ -1,0 +1,79 @@
+2024-03-31 07:42:42.469 | DEBUG    | api.config:<module>:296 - SETTINGS: {
+    "host": "0.0.0.0",
+    "port": 10086,
+    "api_prefix": "/v1",
+    "engine": "vllm",
+    "model_name": "internlm2",
+    "model_path": "/mnt/petrelfs/zhangdi1/chemllm-lnk/LLaMA-Factory-dev/CHEMLLM_1_5_DPO_2_exported",
+    "adapter_model_path": null,
+    "resize_embeddings": false,
+    "dtype": "half",
+    "device": "cuda",
+    "device_map": "auto",
+    "gpus": null,
+    "num_gpus": 2,
+    "only_embedding": false,
+    "embedding_name": "jinaai/jina-embeddings-v2-base-zh",
+    "embedding_size": -1,
+    "embedding_device": "cuda",
+    "quantize": 16,
+    "load_in_8bit": false,
+    "load_in_4bit": false,
+    "using_ptuning_v2": false,
+    "pre_seq_len": 128,
+    "context_length": 32000,
+    "chat_template": null,
+    "rope_scaling": null,
+    "flash_attn": false,
+    "trust_remote_code": true,
+    "tokenize_mode": "fast",
+    "tensor_parallel_size": 2,
+    "gpu_memory_utilization": 0.9,
+    "max_num_batched_tokens": -1,
+    "max_num_seqs": 256,
+    "quantization_method": null,
+    "enforce_eager": false,
+    "max_context_len_to_capture": 8192,
+    "max_loras": 1,
+    "max_lora_rank": 32,
+    "lora_extra_vocab_size": 256,
+    "lora_dtype": "auto",
+    "max_cpu_loras": -1,
+    "lora_modules": "",
+    "use_streamer_v2": false,
+    "api_keys": null,
+    "activate_inference": true,
+    "interrupt_requests": true,
+    "n_gpu_layers": 0,
+    "main_gpu": 0,
+    "tensor_split": null,
+    "n_batch": 512,
+    "n_threads": 128,
+    "n_threads_batch": 128,
+    "rope_scaling_type": -1,
+    "rope_freq_base": 0.0,
+    "rope_freq_scale": 0.0,
+    "tgi_endpoint": null,
+    "tei_endpoint": null,
+    "max_concurrent_requests": 256,
+    "max_client_batch_size": 32
+}
+Some weights of BertModel were not initialized from the model checkpoint at jinaai/jina-embeddings-v2-base-zh and are newly initialized: ['embeddings.position_embeddings.weight', 'encoder.layer.0.intermediate.dense.bias', 'encoder.layer.0.intermediate.dense.weight', 'encoder.layer.0.output.LayerNorm.bias', 'encoder.layer.0.output.LayerNorm.weight', 'encoder.layer.0.output.dense.bias', 'encoder.layer.0.output.dense.weight', 'encoder.layer.1.intermediate.dense.bias', 'encoder.layer.1.intermediate.dense.weight', 'encoder.layer.1.output.LayerNorm.bias', 'encoder.layer.1.output.LayerNorm.weight', 'encoder.layer.1.output.dense.bias', 'encoder.layer.1.output.dense.weight', 'encoder.layer.10.intermediate.dense.bias', 'encoder.layer.10.intermediate.dense.weight', 'encoder.layer.10.output.LayerNorm.bias', 'encoder.layer.10.output.LayerNorm.weight', 'encoder.layer.10.output.dense.bias', 'encoder.layer.10.output.dense.weight', 'encoder.layer.11.intermediate.dense.bias', 'encoder.layer.11.intermediate.dense.weight', 'encoder.layer.11.output.LayerNorm.bias', 'encoder.layer.11.output.LayerNorm.weight', 'encoder.layer.11.output.dense.bias', 'encoder.layer.11.output.dense.weight', 'encoder.layer.2.intermediate.dense.bias', 'encoder.layer.2.intermediate.dense.weight', 'encoder.layer.2.output.LayerNorm.bias', 'encoder.layer.2.output.LayerNorm.weight', 'encoder.layer.2.output.dense.bias', 'encoder.layer.2.output.dense.weight', 'encoder.layer.3.intermediate.dense.bias', 'encoder.layer.3.intermediate.dense.weight', 'encoder.layer.3.output.LayerNorm.bias', 'encoder.layer.3.output.LayerNorm.weight', 'encoder.layer.3.output.dense.bias', 'encoder.layer.3.output.dense.weight', 'encoder.layer.4.intermediate.dense.bias', 'encoder.layer.4.intermediate.dense.weight', 'encoder.layer.4.output.LayerNorm.bias', 'encoder.layer.4.output.LayerNorm.weight', 'encoder.layer.4.output.dense.bias', 'encoder.layer.4.output.dense.weight', 'encoder.layer.5.intermediate.dense.bias', 'encoder.layer.5.intermediate.dense.weight', 'encoder.layer.5.output.LayerNorm.bias', 'encoder.layer.5.output.LayerNorm.weight', 'encoder.layer.5.output.dense.bias', 'encoder.layer.5.output.dense.weight', 'encoder.layer.6.intermediate.dense.bias', 'encoder.layer.6.intermediate.dense.weight', 'encoder.layer.6.output.LayerNorm.bias', 'encoder.layer.6.output.LayerNorm.weight', 'encoder.layer.6.output.dense.bias', 'encoder.layer.6.output.dense.weight', 'encoder.layer.7.intermediate.dense.bias', 'encoder.layer.7.intermediate.dense.weight', 'encoder.layer.7.output.LayerNorm.bias', 'encoder.layer.7.output.LayerNorm.weight', 'encoder.layer.7.output.dense.bias', 'encoder.layer.7.output.dense.weight', 'encoder.layer.8.intermediate.dense.bias', 'encoder.layer.8.intermediate.dense.weight', 'encoder.layer.8.output.LayerNorm.bias', 'encoder.layer.8.output.LayerNorm.weight', 'encoder.layer.8.output.dense.bias', 'encoder.layer.8.output.dense.weight', 'encoder.layer.9.intermediate.dense.bias', 'encoder.layer.9.intermediate.dense.weight', 'encoder.layer.9.output.LayerNorm.bias', 'encoder.layer.9.output.LayerNorm.weight', 'encoder.layer.9.output.dense.bias', 'encoder.layer.9.output.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+WARNING 03-31 07:44:08 config.py:618] Casting torch.bfloat16 to torch.float16.
+Traceback (most recent call last):
+  File "/mnt/cache/Chemllm/api-for-open-llm/server.py", line 2, in <module>
+    from api.models import app, EMBEDDED_MODEL, GENERATE_ENGINE
+  File "/mnt/cache/Chemllm/api-for-open-llm/api/models.py", line 179, in <module>
+    GENERATE_ENGINE = create_vllm_engine()
+  File "/mnt/cache/Chemllm/api-for-open-llm/api/models.py", line 105, in create_vllm_engine
+    engine = AsyncLLMEngine.from_engine_args(engine_args)
+  File "/mnt/cache/Chemllm/miniconda3/envs/server/lib/python3.10/site-packages/vllm/engine/async_llm_engine.py", line 622, in from_engine_args
+    engine_configs = engine_args.create_engine_configs()
+  File "/mnt/cache/Chemllm/miniconda3/envs/server/lib/python3.10/site-packages/vllm/engine/arg_utils.py", line 287, in create_engine_configs
+    model_config = ModelConfig(
+  File "/mnt/cache/Chemllm/miniconda3/envs/server/lib/python3.10/site-packages/vllm/config.py", line 114, in __init__
+    self.max_model_len = _get_and_verify_max_len(self.hf_config,
+  File "/mnt/cache/Chemllm/miniconda3/envs/server/lib/python3.10/site-packages/vllm/config.py", line 662, in _get_and_verify_max_len
+    assert "factor" in rope_scaling
+AssertionError

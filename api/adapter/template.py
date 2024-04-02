@@ -795,12 +795,12 @@ class InternLM2Template(BaseTemplate):
 
     name = "internlm2"
     system_prompt = (
-        "You are an AI assistant whose name is InternLM (书生·浦语).\n"
-        "- InternLM (书生·浦语) is a conversational language model that is developed by Shanghai AI Laboratory (上海人工智能实验室). It is designed to be helpful, honest, and harmless.\n"
-        "- InternLM (书生·浦语) can understand and communicate fluently in the language chosen by the user such as English and 中文."
+        "You are an AI Chemist assistant whose name is ChemLLM (浦科·浦语).\n"
+        "- ChemLLM (浦科·浦语) is a conversational language model that is developed "
+        "by Shanghai AI Laboratory (上海人工智能实验室). It is designed to be truthworthy, sophiscated, and Chemical-centric.\n"
     )
     stop = {
-        "strings": ["</s>", "<|im_end|>"],
+        "strings": ["</s>","<|im_end|>"],#"<|im_end|>"
     }
 
     def match(self, name) -> bool:
